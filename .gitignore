@@ -1,0 +1,10 @@
+.vscode
+.cph/
+.vscode/
+*.exe
+*.bin
+/.exe
+.exe
+.venv/
+.env/
+.env
