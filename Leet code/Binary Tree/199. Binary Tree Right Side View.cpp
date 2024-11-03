@@ -36,3 +36,29 @@ public:
         return v;
     }
 };
+
+// other Optimize approch.
+
+class Solution
+{
+public:
+    void RightSide(TreeNode *root, int level, vector<int> &v)
+    {
+        if (root == NULL)
+            return;
+        if (v.size() == level)
+        {
+            v.push_back(root->val);
+        }
+        RightSide(root->right, level + 1, v);
+        RightSide(root->left, level + 1, v);
+    }
+    vector<int> rightSideView(TreeNode *root)
+    {
+        vector<int> v;
+
+        RightSide(root, 0, v);
+
+        return v;
+    }
+};
